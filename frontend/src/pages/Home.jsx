@@ -12,8 +12,8 @@ const Home = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const productRes = await axios.get('http://localhost:5000/api/products');
-                const categoryRes = await axios.get('http://localhost:5000/api/categories');
+                const productRes = await axios.get('/api/products');
+                const categoryRes = await axios.get('/api/categories');
                 setProducts(productRes.data.slice(0, 8)); // Show 8 featured
                 setCategories(categoryRes.data);
                 setLoading(false);

@@ -1,0 +1,10 @@
+{
+  "name": "shopez-root",
+  "version": "1.0.0",
+  "scripts": {
+    "install:all": "npm install --prefix backend && cd frontend && npm install",
+    "build": "npm run install:all && cd frontend && npm run build",
+    "start": "node backend/server.js",
+    "dev": "npm run start"
+  }
+}

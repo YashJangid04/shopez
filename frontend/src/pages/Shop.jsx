@@ -16,8 +16,8 @@ const Shop = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const productRes = await axios.get('http://localhost:5000/api/products');
-                const categoryRes = await axios.get('http://localhost:5000/api/categories');
+                const productRes = await axios.get('/api/products');
+                const categoryRes = await axios.get('/api/categories');
                 setProducts(productRes.data);
                 setFilteredProducts(productRes.data);
                 setCategories(categoryRes.data);
